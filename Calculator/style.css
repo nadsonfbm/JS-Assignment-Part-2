@@ -16,14 +16,14 @@ body {
 #calc {
     width: 400px;
     padding: 0.5em;
-    background-color: #C4C4C4;
+    background-color:#C4C4C4;
     color: #000;
     display: flex;
     flex-direction: column;
 }
 
 #calc h3 {
-    font-size: .8em;
+    font-size: 0.8em;
     font-weight: 300;
     color: #666;
 }
@@ -57,18 +57,18 @@ body {
 #buttons-container button {
     border: 1px;
     border-radius: 10%;
-    height: 4em;
-    font-size: 1.2em;
-    background-color: #DBDBDB;
+    height: 3.5em;
+    font-size: 1.5em;
+    background-color: lightslategray;
     cursor: pointer;
 }
 
 #buttons-container .number {
-    background-color: #F3F3F3;
+    background-color: darkseagreen;
 }
 
 #buttons-container button:hover {
-    background-color: #BABABA;
+    background-color: darkolivegreen;
     border-color: #999;
 }
 
@@ -77,5 +77,5 @@ body {
 }
 
 #buttons-container #equal-btn:hover {
-    background-color: #3A91D8;
+    background-color: darkslategrey;
 }
