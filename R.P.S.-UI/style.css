@@ -52,6 +52,10 @@ footer {
     align-items: center;
 }
 
+h4 {
+    font-size: 20px;
+}
+
 body {
     background-color: rgba(0, 0, 0, 0.118);
     margin: auto;
