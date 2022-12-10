@@ -14,36 +14,36 @@ possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener("click
 }))
 
 function computerPlay() {
-    let randomNumber = Math.floor(Math.random()*3)+1;
+    const randomNumber = Math.floor(Math.random() * 3) + 1
     if (randomNumber === 1) {
-        computerChoice === rock;
+      computerChoice = 'Rock'
     }
     if (randomNumber === 2) {
-        computerChoice === paper;      
+      computerChoice = 'Scissor'
     }
     if (randomNumber === 3) {
-        computerChoice === scissor;
+      computerChoice = 'Paper'
     }
-    computerChoiceDisplay.innerHTML = computerChoice;
+    computerChoiceDisplay.innerHTML = computerChoice
   }
 
 function playRound() {
-    if (userChoice === "rock" && computerChoice === "paper") {
+    if (userChoice === "Rock" && computerChoice === "Paper") {
         result = "Oh no! Paper covers Rock! You lost the round!";
     }
-    if (userChoice === "rock" && computerChoice === "scissor") {
+    if (userChoice === "Rock" && computerChoice === "Scissor") {
         result = "Great choice! Rock crushes Scissor! You won the round!";
     }
-    if (userChoice === "scissor" && computerChoice === "rock") {
+    if (userChoice === "Scissor" && computerChoice === "Rock") {
         result = "Oh no! Rock crushes Scissor! You lost the round!";
     }
-    if (userChoice === "scissor" && computerChoice === "paper") {
+    if (userChoice === "Scissor" && computerChoice === "Paper") {
         result = "Great choice! Scissor cuts Paper! You won the round!";
     }
-    if (userChoice === "paper" && computerChoice === "scissor") {
+    if (userChoice === "Paper" && computerChoice === "Scissor") {
         result = "Oh no! Scissor cuts Paper! You lost the round!";
     }
-    if (userChoice === "paper" && computerChoice === "rock") {
+    if (userChoice === "Paper" && computerChoice === "Rock") {
         result = "Great choice! Paper covers Rock! You won the round!";
     }
     if (userChoice === computerChoice) {
