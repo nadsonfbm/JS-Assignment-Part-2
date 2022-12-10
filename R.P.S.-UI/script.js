@@ -1,52 +1,52 @@
-let playerSelection;
-let computerSelection;
-let result;
-const playerSelectionDisplay = document.getElementById("player-selection");
-const computerSelectionDisplay = document.getElementById("computer-selection");
-const resultDisplay = document.getElementById("result");
-const randomSelections = document.querySelectorAll("button");
+const computerChoiceDisplay = document.getElementById('computer-choice')
+const userChoiceDisplay = document.getElementById('user-choice')
+const resultDisplay = document.getElementById('result')
+const possibleChoices = document.querySelectorAll('button')
+let userChoice
+let computerChoice
+let result
 
-randomSelections.forEach(randomSelection => randomSelection.addEventListener("click", (e) => {
-    playerSelection = e.target.id;
-    playerSelectionDisplay.innerHTML = playerSelection;
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener("click", (e) => {
+    userChoice = e.target.id;
+    userChoiceDisplay.innerHTML = userChoice;
     computerPlay();
     playRound();
 }))
 
 function computerPlay() {
-    const randomNumber = Math.floor(Math.random()*3)+1;
+    let randomNumber = Math.floor(Math.random()*3)+1;
     if (randomNumber === 1) {
-        computerSelection === rock;
+        computerChoice === rock;
     }
     if (randomNumber === 2) {
-        computerSelection === paper;      
+        computerChoice === paper;      
     }
     if (randomNumber === 3) {
-        computerSelection === scissor;
+        computerChoice === scissor;
     }
-    computerSelectionDisplay.innerHTML = computerSelection;
+    computerChoiceDisplay.innerHTML = computerChoice;
   }
 
 function playRound() {
-    if (playerSelection === "rock" && computerSelection === "paper") {
+    if (userChoice === "rock" && computerChoice === "paper") {
         result = "Oh no! Paper covers Rock! You lost the round!";
     }
-    if (playerSelection === "rock" && computerSelection === "scissor") {
+    if (userChoice === "rock" && computerChoice === "scissor") {
         result = "Great choice! Rock crushes Scissor! You won the round!";
     }
-    if (playerSelection === "scissor" && computerSelection === "rock") {
+    if (userChoice === "scissor" && computerChoice === "rock") {
         result = "Oh no! Rock crushes Scissor! You lost the round!";
     }
-    if (playerSelection === "scissor" && computerSelection === "paper") {
+    if (userChoice === "scissor" && computerChoice === "paper") {
         result = "Great choice! Scissor cuts Paper! You won the round!";
     }
-    if (playerSelection === "paper" && computerSelection === "scissor") {
+    if (userChoice === "paper" && computerChoice === "scissor") {
         result = "Oh no! Scissor cuts Paper! You lost the round!";
     }
-    if (playerSelection === "paper" && computerSelection === "rock") {
+    if (userChoice === "paper" && computerChoice === "rock") {
         result = "Great choice! Paper covers Rock! You won the round!";
     }
-    if (playerSelection === computerSelection) {
+    if (userChoice === computerChoice) {
         result = "Two heads thinking alike. It's a tied round.";
     }
     resultDisplay.innerHTML = result;
